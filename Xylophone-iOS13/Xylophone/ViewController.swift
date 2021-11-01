@@ -21,7 +21,11 @@ class ViewController: UIViewController {
         
        
         playSound(soundname: sender.currentTitle!)
-       
+        
+        sender.alpha = 0.5
+        let timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { (timer) in
+                    sender.alpha = 1
+                    }
     }
     
     func playSound(soundname:String) {
